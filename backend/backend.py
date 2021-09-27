@@ -30,8 +30,7 @@ def read_root():
 
 filename = "records"+str(int(time.time()))+".csv"
 csvfile = open(filename, 'w')
-entrywriter = csv.writer(csvfile, delimiter=' ',
-                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
+entrywriter = csv.writer(csvfile)
 entrywriter.writerow(["Name", "Email", "SCM", "People"])
 
 @app.post("/survey")
